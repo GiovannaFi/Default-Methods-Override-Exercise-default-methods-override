@@ -13,14 +13,14 @@ public class Tester {
         System.out.println(smartphone2);
 
 
-        boolean out = smartphone1 == smartphone2;
-        System.out.println("Is smartphone 1 equals to smartphone 2? " + out);
+        System.out.println("Is smartphone 1 equals to smartphone 2? " + smartphone2.equals(smartphone1));
 
         try {
-            Smartphone smartphone3 = smartphone1.clone();
-            System.out.println(smartphone3);
-            boolean out1 = smartphone1 == smartphone3;
-            System.out.println("Is smartphone 1 equals to smartphone 3? " + out1);
+            Smartphone smartphone3 = smartphone2.clone();
+            System.out.println(smartphone3.toString());
+            System.out.println(smartphone3.equals(smartphone2));
+
+
         } catch (CloneNotSupportedException error){
             error.printStackTrace();
             System.out.println("Error!");

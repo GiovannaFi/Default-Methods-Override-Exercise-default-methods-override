@@ -36,7 +36,11 @@ public class Smartphone implements Cloneable{
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Smartphone that = (Smartphone) o;
-        return batteryMAh == that.batteryMAh && brandName.equals(that.brandName) && modelName.equals(that.modelName) && producerPrice.equals(that.producerPrice) && retailPrice.equals(that.retailPrice);
+        return batteryMAh == that.batteryMAh
+                && brandName.equals(that.brandName)
+                && modelName.equals(that.modelName)
+                && producerPrice.equals(that.producerPrice)
+                && retailPrice.equals(that.retailPrice);
     }
 
     @Override
