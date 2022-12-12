@@ -1,23 +1,23 @@
 import java.util.Objects;
 
-public class Smartphone implements Cloneable{
+public class Smartphone implements Cloneable {
     private String brandName;
     private String modelName;
     private int batteryMAh;
 
-    SmartphonePrice producerPrice;
-    SmartphonePrice retailPrice;
+    private SmartphonePrice producerPrice;
+    private SmartphonePrice retailPrice;
 
 
     @Override
     public Smartphone clone() throws CloneNotSupportedException {
-        Smartphone clonedSmartphone  = (Smartphone) super.clone();
-        clonedSmartphone.producerPrice = producerPrice;
-        clonedSmartphone.retailPrice = retailPrice;
+        Smartphone clonedSmartphone = (Smartphone) super.clone();
+        clonedSmartphone.producerPrice = (SmartphonePrice) this.producerPrice.clone();
+        clonedSmartphone.retailPrice = (SmartphonePrice) this.retailPrice.clone();
         return clonedSmartphone;
     }
 
-    public Smartphone(String brand, String model, int battery, SmartphonePrice prodP, SmartphonePrice retailP){
+    public Smartphone(String brand, String model, int battery, SmartphonePrice prodP, SmartphonePrice retailP) {
         brandName = brand;
         modelName = model;
         batteryMAh = battery;

@@ -18,7 +18,7 @@ public class Tester {
         try {
             Smartphone smartphone3 = smartphone2.clone();
             System.out.println(smartphone3.toString());
-            System.out.println(smartphone3.equals(smartphone2));
+            System.out.println("cloned smartphone == smartphone 2? " + smartphone3.equals(smartphone2));
 
 
         } catch (CloneNotSupportedException error){
